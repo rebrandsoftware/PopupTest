@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Popup Test
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <!-- start jquery mobile -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+    <!-- start phonegap  -->
+    <script src="phonegap.js">
+    </script>
+
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            console.log("Device Ready");
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Home -->
+    <div data-role="page" id="home">
+        <div data-theme="a" data-role="header">
+            <h3>
+          Popup Menu Test   
+        </h3>
+   </div>
+        <div class="ui-content">
+        
+        <a data-role="button" id="aPopup" href="#popupTest" data-position-to="#aPopup" data-rel="popup" data-icon="plus"  data-transition="slidedown" data-iconpos="left">
+          Show Popup Menu
+        </a>
+        
+        <div data-role="popup" id="popupTest">
+            <ul data-role="listview" id="test-list" data-inset="true" style="min-width:210px;" data-theme="a">
+              <li data-role="list-divider" data-theme="b">
+                Header:
+              </li>
+              <li id="menuOption1" data-icon="check">
+                <a href="#">
+                  Option 1
+                </a>
+              </li>
+              <li id="menuOption2" data-icon="edit">
+                <a href="#">
+                 Option 2
+                </a>
+              </li>
+            </ul>
+          </div>
+        
+        
+        </div>
+
+</body>
+
+</html>
